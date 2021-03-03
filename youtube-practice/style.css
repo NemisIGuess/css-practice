@@ -1,4 +1,36 @@
 body {
   min-height: 100vh;
-  background-color: black;
+  background-color: rgb(206, 206, 206);
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
+
+.navigation {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  height: 5em;
+  width: 100%;
+  background-color: white;
+  align-items: center;
+}
+
+.search-input {
+  height: 40px;
+}
+
+.search-button {
+  width: 100px;
+  height: 40px;
+}
+
+.search-svg {
+  stroke: currentColor;
+  fill: none;
+  height: 20px;
+  opacity: 50%;
 }
