@@ -8,16 +8,28 @@
   </head>
   <body>
     <navigation class="flex navigation">
-      <form class="video">
-        <input class="search-input" type="text" placeholder="Search"></input>
-        <button class="search-button">
-          <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-        </svg></button>
+      <div class="nav-start flex">
+        <svg preserveAspectRatio="xMidYMid meet" class="collapsed-menu" viewBox="0 0 20 20">
+          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+        </svg>
+      </div>
+      <form class="video-search flex">
+        <input class="search-input" type="text" placeholder="Search">
+          <button value="search" class="search-button">
+            <svg class="search-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            </svg>
+          </button>
+        </input>
       </form>
+      <div class="nav-end flex">
+
+      </div>
     </navigation>
     <main>
-      <section id="video"></section>
+      <section id="video">
+        <iframe width="560" height="415" src="https://www.youtube.com/embed/1-jKa7sir8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </section>
       <section id="description"></section>
       <section id="comments"></section>
     </main>
