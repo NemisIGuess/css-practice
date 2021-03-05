@@ -1,13 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap');
 
+/* Rules for the whole document */
+
+html * {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif !important;
+}
+
 :root {
   --white: rgb(223, 223, 223);
   --grey: rgb(241, 241, 241);
   --grey-hover: rgb(221, 221, 221);
   --details: rgb(58, 58, 58);
-  --blue: rgba(129, 154, 172, 0.897);
+  --blue: rgba(152, 166, 177, 0.897);
   --blue-focus: rgb(59, 66, 167);
-  font-family: 'Roboto', Arial, sans-serif;
+  --alt-background: rgba(102, 102, 102, 0.836);
   font-size: 10px;
 }
 
@@ -23,10 +29,14 @@ body {
   opacity: 80%;
 }
 
+/* Flex class with general rules for all flex elements */
+
 .flex {
   display: flex;
-  justify-content: center;
+  align-items: center;
 }
+
+/* Rules for the navigation bar */
 
 .navigation {
   position: fixed;
@@ -39,28 +49,63 @@ body {
   padding: 0 30px;
 }
 
+/* Here goes the hamburguer menu and the logo */
+
 .nav-start {
-  flex-grow: 2;
+  flex-grow: 1;
   justify-content: flex-start;
 }
 
-.collapsed-menu {
-  width: 24px;
-  height: 20px;
-  fill: var(--details);
-  opacity: 80%;
-  cursor: pointer;
-  padding: 2px 2px;
-}
+/* Video search is the form in the middle of the nav bar */
 
 .video-search {
   flex-grow: 4;
-  width: 30%;
+  width: 10%;
 }
 
 .nav-end {
-  flex-grow: 2;
+  flex-grow: 5;
 }
+
+/* Hamburguer menu on top left */
+
+.collapsed-menu {
+  width: 26px;
+  height: 24px;
+  fill: var(--details);
+  opacity: 80%;
+  cursor: pointer;
+}
+
+/* SVG of the youtube logo */
+
+.youtube-logo-container {
+  width: 80px;
+  height: 24px;
+  margin-left: 3em;
+  cursor: pointer;
+  position: relative;
+}
+
+.youtube-logo-container::after {
+  font-family: 'Roboto';
+  content: 'ES';
+  position: absolute;
+  top: 0;
+  left: 101%;
+  opacity: 90%;
+  font-size: 1.1em;
+}
+
+.youtube-logo-background {
+  fill: #f00;
+}
+
+.youtube-logo-arrow {
+  fill: #fff;
+}
+
+/* Rules for the search bar and the search button */
 
 .search-input {
   height: 2.3em;
@@ -81,7 +126,7 @@ input[type='text' i] {
   line-height: 24px;
 }
 
-.search-button {
+.search-btn {
   width: 5em;
   height: 2.4em;
   border: 1px solid var(--blue);
@@ -89,23 +134,56 @@ input[type='text' i] {
   border-radius: 0 1px 1px 0;
   background-color: var(--grey);
   cursor: pointer;
+  position: relative;
 }
 
-.search-button:focus {
+.search-btn:focus {
   outline: none;
 }
 
-.search-button:hover {
+.search-btn:hover {
   background-color: var(--grey-hover);
 }
 
-.search-button:hover > .search-svg {
+/* Div with the alt text for the search button */
+
+.btn-alt {
+  all: revert;
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: var(--alt-background);
+  border-radius: 1px;
+  padding: 0.8rem 0.8rem;
+  white-space: nowrap;
+  font-size: 20px;
+}
+
+.search-btn:hover > .btn-alt {
+  visibility: visible;
+}
+
+.search-btn:hover > .search-svg {
   opacity: 100%;
 }
 
 .search-svg {
   stroke: var(--details);
   fill: none;
-  height: 20px;
+  height: 1.3em;
   opacity: 70%;
+}
+
+.search-voice {
+  width: 2.5em;
+  height: 2.5em;
+  fill: rgb(85, 85, 85);
+  margin-left: 1em;
+  cursor: pointer;
+  position: relative;
+}
+
+.search-voice:hover > .search-voice-alt {
+  visibility: visible;
 }
