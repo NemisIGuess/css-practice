@@ -12,7 +12,8 @@ html * {
   --grey-hover: rgb(221, 221, 221);
   --details: rgb(58, 58, 58);
   --blue: rgba(152, 166, 177, 0.897);
-  --blue-focus: rgb(59, 66, 167);
+  --blue-focus: rgb(6, 95, 212);
+  --nav-bar-buttons: rgb(85, 85, 85);
   --alt-background: rgba(102, 102, 102, 0.836);
   font-size: 10px;
 }
@@ -34,6 +35,7 @@ body {
 .flex {
   display: flex;
   align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Rules for the navigation bar */
@@ -43,10 +45,10 @@ body {
   top: 0;
   bottom: 0;
   height: 6em;
-  width: 100%;
+  width: 98%;
   background-color: white;
   align-items: center;
-  padding: 0 30px;
+  padding: 0 1%;
 }
 
 /* Here goes the hamburguer menu and the logo */
@@ -59,12 +61,12 @@ body {
 /* Video search is the form in the middle of the nav bar */
 
 .video-search {
-  flex-grow: 4;
-  width: 10%;
+  flex-grow: 0.8;
 }
 
 .nav-end {
-  flex-grow: 5;
+  flex-grow: 1;
+  justify-content: flex-end;
 }
 
 /* Hamburguer menu on top left */
@@ -103,6 +105,22 @@ body {
 
 .youtube-logo-arrow {
   fill: #fff;
+}
+
+/* Div with the rules for alt text div of the nav elements */
+
+.btn-alt {
+  visibility: hidden;
+  color: white;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  background: var(--alt-background);
+  border-radius: 1px;
+  padding: 0.8rem 0.8rem;
+  white-space: nowrap;
+  font-size: 1.2em;
+  font-weight: 400;
 }
 
 /* Rules for the search bar and the search button */
@@ -145,21 +163,6 @@ input[type='text' i] {
   background-color: var(--grey-hover);
 }
 
-/* Div with the alt text for the search button */
-
-.btn-alt {
-  all: revert;
-  color: white;
-  position: absolute;
-  top: 50px;
-  left: 0;
-  background: var(--alt-background);
-  border-radius: 1px;
-  padding: 0.8rem 0.8rem;
-  white-space: nowrap;
-  font-size: 20px;
-}
-
 .search-btn:hover > .btn-alt {
   visibility: visible;
 }
@@ -178,12 +181,61 @@ input[type='text' i] {
 .search-voice {
   width: 2.5em;
   height: 2.5em;
-  fill: rgb(85, 85, 85);
+  fill: var(--nav-bar-buttons);
   margin-left: 1em;
   cursor: pointer;
   position: relative;
 }
 
-.search-voice:hover > .search-voice-alt {
+.search-voice:hover > .btn-alt {
   visibility: visible;
+  left: -200%;
+}
+
+/* Rules for nav-end */
+
+.apps-btn {
+  width: 26px;
+  fill: var(--nav-bar-buttons);
+  cursor: pointer;
+  position: relative;
+}
+
+.apps-btn:hover > .btn-alt {
+  visibility: visible;
+  left: -150%;
+}
+
+.config-btn {
+  width: 26px;
+  fill: var(--nav-bar-buttons);
+  cursor: pointer;
+  position: relative;
+  margin: 0 20px;
+}
+
+.config-btn:hover > .btn-alt {
+  visibility: visible;
+  left: -60%;
+}
+
+/* Div that simulates a button at nav end */
+
+.login-btn {
+  height: 4em;
+  width: fit-content;
+  border: 1px solid var(--blue-focus);
+  cursor: pointer;
+}
+
+.login-svg {
+  width: 2.6em;
+  fill: var(--blue-focus);
+  padding: 0 1em;
+}
+
+.login-txt {
+  font-size: 1.5em;
+  padding-right: 1em;
+  color: var(--blue-focus);
 }
