@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <navigation class="flex navigation">
+    <nav class="flex">
 
       <div class="nav-start flex">
         <svg class="collapsed-menu" viewBox="0 0 26 24">
@@ -65,14 +65,16 @@
           <h3 class="login-txt">LOG IN</h2>
         </div>
       </div>
-    </navigation>
+    </nav>
     <main>
-      <section id="video">
-        <iframe width="560" height="415" src="https://www.youtube.com/embed/1-jKa7sir8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </section>
-      <section id="description"></section>
-      <section id="comments"></section>
+      <div class="vid-container-div">
+        <section id="video">
+          <iframe width="1280" height="720" src="https://www.youtube.com/embed/1-jKa7sir8c" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </section>
+        <section id="description"></section>
+        <section id="comments"></section>
+      </div>
+      <aside id="related-vids"></aside>
     </main>
-    <aside id="related-vids"></aside>
   </body>
 </html>
