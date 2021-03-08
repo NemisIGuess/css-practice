@@ -252,7 +252,6 @@ main {
 }
 
 .vid-container-div {
-  background-color: coral;
   width: 100%;
   height: 100%;
 }
@@ -261,4 +260,41 @@ aside {
   background-color: black;
   width: 100%;
   height: 100%;
+}
+
+.related-vid {
+  margin: 10px 0;
+  background: white;
+  width: 100%;
+  height: 94px;
+  display: grid;
+  grid-template-columns: 168px 1fr;
+  grid-template-rows: 20% 15px 1fr;
+  grid-template-areas:
+    'img title'
+    'img channel'
+    'img views';
+}
+
+.related-vid:first-child {
+  margin-top: 0;
+}
+
+.related-vid-title {
+  color: black;
+  font-size: 17px;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  grid-area: title;
+}
+
+.related-vid-channel {
+  grid-area: channel;
+  font-size: 13px;
+}
+
+.related-vid-views {
+  grid-area: views;
 }
