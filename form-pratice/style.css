@@ -1,0 +1,32 @@
+:root {
+  --border-color: #c1c5c8;
+  --border-focus: #52a8ec;
+}
+
+main {
+  height: 100vw;
+  background-color: #eceef1;
+}
+
+form {
+  display: flex;
+  height: fit-content;
+  width: 380px;
+  padding: 2em 20px;
+  flex-direction: column;
+  background-color: #fff;
+  border: 1px solid var(--border-color);
+}
+
+input[type='email'] {
+  height: 2.3em;
+  outline: none;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+input[type='email']:focus {
+  border-color: var(--border-focus);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset, 0 0 8px rgb(82 168 236 / 60%);
+}
