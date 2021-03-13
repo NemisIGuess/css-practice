@@ -12,12 +12,27 @@
         <h1>Create an Intuit account</h1>
         <p>One account for everything Intuit, including Mint.</p>
         <a href="#">Learn more</a>
-        <label>Email adress</label>
-        <input type="email" />
-        <label>Phone (recommended)</label>
-        <input type="tel" />
-        <label>Password</label>
-        <input type="password" />
+        <label>
+          Email adress
+          <input type="email" autocomplete="off" />
+          <div class="alt-text">You'll use this as your user ID</div>
+        </label>
+        <label>
+          Phone (recommended)
+          <input type="tel" autocomplete="off" />
+          <div class="alt-text">
+            We strongly recommend adding a phone number. This will help verify
+            your account and keep it safe.
+          </div>
+        </label>
+        <label>
+          Password
+          <input type="password" />
+          <div class="alt-text">
+            Create a password you have never used before. This will help keep
+            your account safe.
+          </div>
+        </label>
         <button type="submit">Create Account</button>
         <p>
           By clicking Create Account, you agree to our <a href="#">Terms</a> and

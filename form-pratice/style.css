@@ -3,9 +3,18 @@
   --border-focus: #52a8ec;
 }
 
+h1 {
+  font-size: 24px;
+  padding-bottom: 1.5em;
+  text-align: center;
+}
+
 main {
-  height: 100vw;
+  height: 100vh;
   background-color: #eceef1;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 form {
@@ -18,15 +27,27 @@ form {
   border: 1px solid var(--border-color);
 }
 
-input[type='email'] {
+input {
+  width: 100%;
   height: 2.3em;
   outline: none;
   border: 1px solid var(--border-color);
   border-radius: 3px;
   background-color: transparent;
+  display: block;
+  position: relative;
 }
 
-input[type='email']:focus {
+input:focus {
   border-color: var(--border-focus);
   box-shadow: 0 1px 1px rgb(0 0 0 / 8%) inset, 0 0 8px rgb(82 168 236 / 60%);
+}
+
+.alt-text {
+  visibility: hidden;
+  position: absolute;
+}
+
+label:focus-within > .alt-text {
+  visibility: visible;
 }
