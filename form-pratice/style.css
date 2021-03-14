@@ -27,6 +27,10 @@ form {
   border: 1px solid var(--border-color);
 }
 
+label {
+  position: relative;
+}
+
 input {
   width: 100%;
   height: 2.3em;
@@ -35,7 +39,7 @@ input {
   border-radius: 3px;
   background-color: transparent;
   display: block;
-  position: relative;
+  margin: 1em 0;
 }
 
 input:focus {
@@ -46,6 +50,12 @@ input:focus {
 .alt-text {
   visibility: hidden;
   position: absolute;
+  background-color: blanchedalmond;
+  left: 110%;
+  top: 38%;
+  width: 150px;
+  padding: 1em;
+  border-radius: 2px;
 }
 
 label:focus-within > .alt-text {
