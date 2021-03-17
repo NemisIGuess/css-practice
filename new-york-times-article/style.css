@@ -104,7 +104,7 @@ h1 {
 .social-media {
   width: 58%;
   height: 30px;
-  margin: 1.5em 0;
+  margin: 1.2em 0 2em;
 }
 
 .sm-svg-container {
@@ -132,10 +132,20 @@ figure {
 
 .article-img {
   width: 100%;
-  background-color: pink;
 }
 
 figcaption {
-  width: 65%;
+  width: 75%;
   align-self: flex-start;
+  font-size: 0.9375em;
+  line-height: 1.25em;
+  margin: 10px 0;
+  color: rgb(102, 102, 102);
+}
+
+small {
+  font-family: Georgia;
+  font-size: 0.75em;
+  line-height: 1.125em;
+  color: #888;
 }
