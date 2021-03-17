@@ -1,0 +1,73 @@
+* {
+  box-sizing: border-box;
+  font-family: helvetica;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+header {
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 3px 15px;
+  height: 42px;
+  width: 100%;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+/* Div that contains burguer-menu, search and newspaper section h3 and its children */
+
+.header-start {
+  height: 36px;
+  align-self: center;
+  justify-content: space-between;
+  width: 220px;
+}
+
+.newspaper-section-link:link,
+.newspaper-section-link:visited {
+  color: black;
+  font-weight: bold;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.newspaper-section-link:hover {
+  text-decoration: underline;
+}
+
+.svg-container {
+  padding: 8px;
+  width: 32px;
+  height: 32px;
+  cursor: pointer;
+}
+
+.svg-container:hover {
+  background-color: rgba(155, 155, 155, 0.07);
+  border-radius: 1px;
+}
+
+/* Div that contains the New York Times logo*/
+
+.nyt-logo-container {
+  width: 195px;
+  cursor: pointer;
+}
+
+/* Div that contains the header buttons and its children */
+
+.header-btn {
+  width: fit-content;
+  padding: 11px 12px 8px;
+  color: white;
+  background-color: #567b95;
+  font-size: 0.7em;
+  font-weight: bold;
+  border: 1px solid #326891;
+  border-radius: 3px;
+}
