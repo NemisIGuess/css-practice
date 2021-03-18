@@ -4,7 +4,8 @@
 }
 
 body {
-  max-width: 1920px;
+  max-width: 1350px;
+  margin: 0 auto;
 }
 
 .flex {
@@ -17,10 +18,17 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  background-color: #fff;
   padding: 3px 15px;
   height: 42px;
   width: 100%;
   border-bottom: 1px solid #e2e2e2;
+}
+
+@media screen and (min-width: 1350px) {
+  header {
+    justify-content: space-around;
+  }
 }
 
 /* Div that contains burguer-menu, search and newspaper section h3 and its children */
@@ -32,15 +40,15 @@ header {
   width: 220px;
 }
 
-.newspaper-section-link:link,
-.newspaper-section-link:visited {
+.link:link,
+.link:visited {
   color: black;
   font-weight: bold;
   font-size: 0.9em;
   text-decoration: none;
 }
 
-.newspaper-section-link:hover {
+.link:hover {
   text-decoration: underline;
 }
 
@@ -49,6 +57,7 @@ header {
   width: 32px;
   height: 32px;
   cursor: pointer;
+  transition: background-color 1s;
 }
 
 .header-svg-container:hover {
@@ -74,6 +83,12 @@ header {
   font-weight: bold;
   border: 1px solid #326891;
   border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.header-btn:hover {
+  background-color: #326891;
 }
 
 /* Here begin styles for the page itself */
@@ -148,4 +163,17 @@ small {
   font-size: 0.75em;
   line-height: 1.125em;
   color: #888;
+}
+
+/* Article */
+
+.author-date {
+  width: 100%;
+  margin-top: 3em;
+  height: 150px;
+}
+
+.author {
+  font-weight: bold;
+  font-size: 1.1em;
 }
